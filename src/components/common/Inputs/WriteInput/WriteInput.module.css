@@ -1,0 +1,31 @@
+.input_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 89%;
+    height: 35px;
+    background: #FFF;
+}
+
+.write_input{
+    width: 100%;
+    border: 0;
+}
+
+.write_input:focus {
+    outline: none !important;
+    outline-offset: initial !important;
+    box-shadow: initial !important;
+    border-color: initial !important;
+    border: none !important; 
+}
+
+.write_input::placeholder{
+    color: #A1A9C3;
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+}

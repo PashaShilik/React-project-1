@@ -1,0 +1,36 @@
+.status_user_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    border-bottom: 1px solid #E3E6ED;
+    padding: 0 15px;
+    gap: 10px;
+    height: 11.55%;
+}
+
+.name_and_status_container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.name_user{
+    color: #1D1D1F;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+}
+
+.status_user{
+    color: #0D99FF;
+    font-family: Arial;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+}

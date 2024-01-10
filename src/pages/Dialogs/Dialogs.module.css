@@ -1,0 +1,28 @@
+.dialogs_wrapper{
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    height: 756px;
+}
+
+.page_title{
+    font-family: Arial;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.messages_container{
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    border: 1px solid #E3E6ED;
+    background: #FFF;
+    border-radius: 15px;
+    height: 608px;
+}

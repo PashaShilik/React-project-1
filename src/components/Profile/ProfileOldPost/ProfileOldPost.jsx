@@ -1,6 +1,7 @@
 import styles from './ProfileOldPost.module.css'
 
-function ProfileOldPost () {
+function ProfileOldPost (props) {
+
     return(
       <div className={styles.old_user_post_container}>
         <div className={styles.old_user_post_card}>
@@ -17,12 +18,7 @@ function ProfileOldPost () {
 
           <div className={styles.old_post_text_container}>
             <p className={styles.old_post_text_content}>
-            Вчера друг позвал в гости. На вопрос "какой повод", ответил - сочельник и Рождество. Друг татарин. 
-            За столом были 5 татар, 1 русский и 1 чувашин. Первый тостующий начал говорить на ломаном русском, 
-            на что русский сказал "татарча сойлэшегез, мин анлыйм" (говорите по татарски, я всё понимаю). 
-            А чувашин шпарит на татарском, как на родном. В полночь пошли к церкви, но заходить не стали, посчитали,
-            что в подпитом состоянии это неправильно и харам. Посмотрели салют и пошли в баню. 
-            Я это к чему - для нормальных людей нет никаких различий и по национальности и по религии. Обожаю свой Татарстан.
+              {props.text}
             </p>
           </div>
 

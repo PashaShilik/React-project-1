@@ -15,7 +15,8 @@ function Profile () {
 
         <ProfileUserPost/>
 
-        <ProfileOldPost/>
+        <ProfileOldPost text='Привет, я старый пост под номером 1'/>
+        <ProfileOldPost text='Привет, я старый пост под номером 2'/>
 
       </div>
     )
