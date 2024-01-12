@@ -1,24 +1,25 @@
+import { Link } from 'react-router-dom'
 import styles from './NavMenu.module.css'
 
 function NavMenu () {
     return(
         <nav className={styles.main_nav_menu}>
             <ul className={styles.main_nav_menu_list}>
-            <li className={styles.main_nav_menu_list_item}>
-                <a href='/Profile' className={styles.main_nav_menu_list_item_link}>Profile</a>
-            </li>
-            <li className={styles.main_nav_menu_list_item}>
-                <a href='/Messages' className={styles.main_nav_menu_list_item_link}>Messages</a>
-            </li>
-            <li className={styles.main_nav_menu_list_item}>
-                <a href='/News' className={styles.main_nav_menu_list_item_link}>News</a>
-            </li>
-            <li className={styles.main_nav_menu_list_item}>
-                <a href='/Music' className={styles.main_nav_menu_list_item_link}>Music</a>
-            </li>
-            <li className={styles.main_nav_menu_list_item}>
-                <a href='/Settings' className={styles.main_nav_menu_list_item_link}>Settings</a>
-            </li>
+                <li className={styles.main_nav_menu_list_item}>
+                    <Link to='/profile' className={styles.active_link}>Profile</Link>
+                </li>
+                <li className={styles.main_nav_menu_list_item}>
+                    <Link to='/dialogs' className={styles.main_nav_menu_list_item_link}>Messages</Link>
+                </li>
+                <li className={styles.main_nav_menu_list_item}>
+                    <Link to='/News' className={styles.main_nav_menu_list_item_link}>News</Link>
+                </li>
+                <li className={styles.main_nav_menu_list_item}>
+                    <Link to='/Music' className={styles.main_nav_menu_list_item_link}>Music</Link>
+                </li>
+                <li className={styles.main_nav_menu_list_item}>
+                    <Link to='/Settings' className={styles.main_nav_menu_list_item_link}>Settings</Link>
+                </li>
             </ul>
         </nav>
     )

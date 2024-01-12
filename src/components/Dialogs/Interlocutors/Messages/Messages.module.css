@@ -2,17 +2,16 @@
     display: flex;
     align-items:flex-start;
     justify-content: space-between;
-    width: 100%;
+    width: 270px;
     height: 80px;
-    border-bottom: 1px solid #E3E6ED;
+    border-bottom: 1px solid #E3E6ED !important;
     padding: 10px;
     gap: 10px;
 }
 
 .message_user_container:last-child {
-    border-bottom: none;
+    border-bottom: none ;
 }
-
 
 .avatar_and_name_container{
     display: flex;

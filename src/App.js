@@ -1,3 +1,4 @@
+import {BrowserRouter, Route, Routes} from "react-router-dom"
 import './App.css';
 import Header from './components/Header/Header';
 import NavMenu from './components/NavMenu/NavMenu';
@@ -6,16 +7,19 @@ import Dialogs from './pages/Dialogs/Dialogs';
 
 function App() {
   return (
-    <div className="App">
-
-      <Header/>
-
-      <div className='main_content_container'>
-        <NavMenu/>
-        {/* <Profile/> */}
-        <Dialogs/>
+    <BrowserRouter>
+      <div className="App">
+        <Header/>
+        <div className='main_content_container'>
+          <NavMenu/>
+            <Routes>
+              <Route path="/profile"  element={<Profile/>}/>
+              <Route path="/dialogs/:id" element={<Dialogs/>}/>
+            </Routes>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
+   
   );
 }
 
