@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import styles from './NavMenu.module.css'
 
-function NavMenu () {
+import BlockFriends from './BlockFriends/BlockFriends'
+
+function NavMenu (props) {
     return(
         <nav className={styles.main_nav_menu}>
             <ul className={styles.main_nav_menu_list}>
@@ -21,6 +23,8 @@ function NavMenu () {
                     <Link to='/Settings' className={styles.main_nav_menu_list_item_link}>Settings</Link>
                 </li>
             </ul>
+
+            <BlockFriends friendsData={props.friendsData}/>
         </nav>
     )
 }
