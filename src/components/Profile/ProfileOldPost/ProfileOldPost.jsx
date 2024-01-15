@@ -1,4 +1,5 @@
 import styles from './ProfileOldPost.module.css'
+import Like from '../../../Images/Common/ico_like.svg'
 
 function ProfileOldPost (props) {
 
@@ -11,8 +12,8 @@ function ProfileOldPost (props) {
               <img src='https://art.kartinkof.club/uploads/posts/2023-07/thumbs/1688921518_art-kartinkof-club-p-kartina-portret-art-15.jpg'/>
             </div>
             <div className={styles.old_post_user_name_and_data}>
-              <p className={styles.old_post_user_name}>Pavel Shilik</p>
-              <p className={styles.old_post_user_data}>08.12.2023</p>
+              <p className={styles.old_post_user_name}>{props.name}</p>
+              <p className={styles.old_post_user_data}>{props.data}</p>
             </div>
           </div>
 
@@ -22,6 +23,10 @@ function ProfileOldPost (props) {
             </p>
           </div>
 
+          <div className={styles.post_like_container}>
+            <p className={styles.like_number}>{props.like}</p>
+            <img src={Like}/>
+          </div>
         </div>
       </div>
     )   

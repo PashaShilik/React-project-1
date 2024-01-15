@@ -9,7 +9,7 @@ function NavMenu () {
                     <Link to='/profile' className={styles.active_link}>Profile</Link>
                 </li>
                 <li className={styles.main_nav_menu_list_item}>
-                    <Link to='/dialogs' className={styles.main_nav_menu_list_item_link}>Messages</Link>
+                    <Link to='/dialogs/:id' className={styles.main_nav_menu_list_item_link}>Messages</Link>
                 </li>
                 <li className={styles.main_nav_menu_list_item}>
                     <Link to='/News' className={styles.main_nav_menu_list_item_link}>News</Link>

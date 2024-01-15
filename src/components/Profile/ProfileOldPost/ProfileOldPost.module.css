@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 96%;
+    width: 100%;
     min-height: 150px;
     gap: 20px;
     padding: 20px;
@@ -82,4 +82,18 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+}
+
+.post_like_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+}
+
+.post_like_container img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }

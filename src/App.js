@@ -5,7 +5,8 @@ import NavMenu from './components/NavMenu/NavMenu';
 import Profile from './components/Profile/Profile';
 import Dialogs from './pages/Dialogs/Dialogs';
 
-function App() {
+function App(props) {
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -13,8 +14,8 @@ function App() {
         <div className='main_content_container'>
           <NavMenu/>
             <Routes>
-              <Route path="/profile"  element={<Profile/>}/>
-              <Route path="/dialogs/:id" element={<Dialogs/>}/>
+              <Route path="/profile"  element={<Profile oldPostContent={props.oldPostContent}/>}/>
+              <Route path="/dialogs/:id" element={<Dialogs usersData={props.usersData}/>} />
             </Routes>
         </div>
       </div>

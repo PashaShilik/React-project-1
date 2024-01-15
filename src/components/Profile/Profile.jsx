@@ -5,7 +5,8 @@ import ProfileUserPost from './ProfileUserPost/ProfileUserPost'
 import ProfileOldPost from './ProfileOldPost/ProfileOldPost'
 
 
-function Profile () {
+function Profile (props) {
+
     return(
         <div className={style.main_content}>
 
@@ -15,8 +16,13 @@ function Profile () {
 
         <ProfileUserPost/>
 
-        <ProfileOldPost text='Привет, я старый пост под номером 1'/>
-        <ProfileOldPost text='Привет, я старый пост под номером 2'/>
+        {props.oldPostContent.map(content => <ProfileOldPost 
+        key={content.id} 
+        text={content.text} 
+        like={content.like}
+        name={content.name}
+        data={content.data}
+        />)}
 
       </div>
     )
