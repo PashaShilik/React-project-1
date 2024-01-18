@@ -6,6 +6,7 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './pages/Dialogs/Dialogs';
 
 function App(props) {
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -13,7 +14,7 @@ function App(props) {
         <div className='main_content_container'>
           <NavMenu friendsData={props.state.navBarComponent.friendsData} />
             <Routes>
-              <Route path="/profile"  element={<Profile oldPostContent={props.state.pageProfile.oldPostContent}/>}/>
+              <Route path="/profile"  element={<Profile oldPostContent={props.state.pageProfile.oldPostContent} addPost={props.addPost}/>}/>
               <Route path="/dialogs/:id" element={<Dialogs usersData={props.state.pageDialogs.usersData}/>} />
             </Routes>
         </div>

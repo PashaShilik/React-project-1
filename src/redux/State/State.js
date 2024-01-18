@@ -2,6 +2,8 @@ import avatarIco_1 from '../../Images/Common/Avatar/avatar_2.png'
 import avatarIco_2 from '../../Images/Common/Avatar/avatar_3.png'
 import avatarIco_3 from '../../Images/Common/Avatar/avatar_4.png'
 
+import { rerenderEntriesThree } from '../../render'
+
 const state = {
 
     pageProfile: {   //Массив передается в Profile
@@ -33,6 +35,22 @@ const state = {
             {id:3, name:'Андрей', avatar: avatarIco_3}
         ]
     }
+}
+
+
+export const addPost = (postMessage) => { //Добавление нового поста после ввода текста в textarea
+
+    const newPost = {
+        id: 5,
+        text: postMessage,
+        like: 0,
+        name: 'Pavel Shilik',
+        data: 'дата',
+    }
+
+    state.pageProfile.oldPostContent.unshift(newPost);
+    rerenderEntriesThree(state)
+
 }
 
 export default state

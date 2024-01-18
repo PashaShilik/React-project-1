@@ -7,6 +7,7 @@ import ProfileOldPost from './ProfileOldPost/ProfileOldPost'
 
 function Profile (props) {
 
+
     return(
         <div className={style.main_content}>
 
@@ -14,7 +15,7 @@ function Profile (props) {
 
         <ProfileDescription/>
 
-        <ProfileUserPost/>
+        <ProfileUserPost addPost={props.addPost}/>
 
         {props.oldPostContent.map(content => <ProfileOldPost 
         key={content.id} 
