@@ -6,8 +6,12 @@ function ProfileUserPost (props) {
   let newPostElement = React.createRef();
 
   const addPost = () => {
-      let text = newPostElement.current.value
-      props.addPost(text)
+      props.addPost()
+  }
+
+  const onPostChange = () => {
+    let text = newPostElement.current.value
+    props.changeNewPostText(text)
   }
 
     return(
@@ -19,9 +23,9 @@ function ProfileUserPost (props) {
             className={styles.write_new_post_textarea} 
             placeholder='Your post'
             ref={newPostElement}
-            >
-
-            </textarea>
+            onChange={onPostChange}
+            value={props.newPostText}
+            />
           </div>
 
           <div className={styles.button_send_container}>

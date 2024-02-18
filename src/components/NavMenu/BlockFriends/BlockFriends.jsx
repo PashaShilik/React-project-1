@@ -1,6 +1,7 @@
 import styles from './BlockFriends.module.css'
 
 function BlockFriends (props) {
+    
     return(
             <div className={styles.block_friends_container}>
                 <div className={styles.block_friends_header}>

@@ -4,6 +4,7 @@ import styles from './NavMenu.module.css'
 import BlockFriends from './BlockFriends/BlockFriends'
 
 function NavMenu (props) {
+
     return(
         <nav className={styles.main_nav_menu}>
             <ul className={styles.main_nav_menu_list}>

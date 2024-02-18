@@ -15,7 +15,7 @@ function Profile (props) {
 
         <ProfileDescription/>
 
-        <ProfileUserPost addPost={props.addPost}/>
+        <ProfileUserPost newPostText={props.newPostText} addPost={props.addPost} changeNewPostText={props.changeNewPostText}/>
 
         {props.oldPostContent.map(content => <ProfileOldPost 
         key={content.id} 
