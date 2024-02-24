@@ -1,7 +1,7 @@
 import styles from './BlockFriends.module.css'
 
 function BlockFriends (props) {
-    
+
     return(
             <div className={styles.block_friends_container}>
                 <div className={styles.block_friends_header}>
@@ -10,7 +10,7 @@ function BlockFriends (props) {
                 </div>
 
                 <div className={styles.friends_container}>
-                    {props.friendsData.map( friend =>
+                {props.friendsData.map( friend =>
                         <div key={friend.id} className={styles.friend_avatar_container}>
                             <div className={styles.avatar_friend}>
                                 <img src={friend.avatar} alt='иконка'/>

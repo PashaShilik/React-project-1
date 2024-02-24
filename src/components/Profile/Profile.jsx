@@ -15,15 +15,15 @@ function Profile (props) {
 
         <ProfileDescription/>
 
-        <ProfileUserPost newPostText={props.newPostText} addPost={props.addPost} changeNewPostText={props.changeNewPostText}/>
+        <ProfileUserPost newPostText={props.newPostText} dispatch={props.dispatch}/>
 
-        {props.oldPostContent.map(content => <ProfileOldPost 
+      {props.oldPostContent.map(content => <ProfileOldPost 
         key={content.id} 
         text={content.text} 
         like={content.like}
         name={content.name}
         data={content.data}
-        />)}
+        />)} 
 
       </div>
     )

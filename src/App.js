@@ -11,18 +11,21 @@ function App(props) {
       <div className="App">
         <Header/>
         <div className='main_content_container'>
-          <NavMenu friendsData={props.store.navBarComponent.friendsData} /> 
+          <NavMenu friendsData={props.state.navBarReducer.friendsData} /> 
             <Routes>
               <Route path="/profile"  
               element={<Profile 
-              newPostText={props.store.pageProfile.newPostText} 
-              oldPostContent={props.store.pageProfile.oldPostContent} 
-              addPost={props.addPost}
-              changeNewPostText={props.changeNewPostText}
+              newPostText={props.state.profileReducer.newPostText} 
+              oldPostContent={props.state.profileReducer.oldPostContent} 
+              dispatch={props.dispatch}
               />}
               />
 
-              <Route path="/dialogs/:id" element={<Dialogs usersData={props.store.pageDialogs.usersData}/>} /> 
+              <Route path="/dialogs/:id" element={<Dialogs 
+              usersData={props.state.dialogsReducer.usersData}
+              newMessageText={props.state.dialogsReducer.newMessageText}
+              myOldMessage={props.state.dialogsReducer.myOldMessage}
+              dispatch={props.dispatch}/>} /> 
             </Routes>
         </div>
       </div>

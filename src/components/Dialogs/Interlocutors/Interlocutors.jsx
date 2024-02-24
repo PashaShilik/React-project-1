@@ -12,7 +12,7 @@ function Interlocutors (props) {
                 <SearchInput>Поиск людей...</SearchInput>
             </div>
             <div className={styles.users_list_container}>
-            {props.usersData.map(user => <Link key={user.id} to={`/dialogs/${user.id}`}>
+             {props.usersData.map(user => <Link key={user.id} to={`/dialogs/${user.id}`}>
                 <Messages
                 data={user.data} 
                 message={user.message} 

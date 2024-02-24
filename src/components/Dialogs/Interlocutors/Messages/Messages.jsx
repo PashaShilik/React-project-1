@@ -5,8 +5,6 @@ import avatar from '../../../../Images/Common/Avatar/avatar_1.png'
 
 
 function Messages (props) {
-
-    console.log(props)
     return (
         <div className={styles.message_user_container}>
             <div className={styles.avatar_and_name_container}>

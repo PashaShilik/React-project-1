@@ -2,6 +2,10 @@ import avatarIco_1 from '../../Images/Common/Avatar/avatar_2.png'
 import avatarIco_2 from '../../Images/Common/Avatar/avatar_3.png'
 import avatarIco_3 from '../../Images/Common/Avatar/avatar_4.png'
 
+import profileReducer from './reducers/profileReducer'
+import dialogsReducer from './reducers/dialogsReducer'
+import navBarReducer from './reducers/navBarReducer'
+
 let store = {
     _state:{ 
         pageProfile: {   //Массив передается в Profile
@@ -12,7 +16,7 @@ let store = {
             {id:4, text:'Привет, я старый пост под номером 4', like: 29, name:'Pavel Shilik', data:'10.05.2023'},
             {id:5, text:'Привет, я старый пост под номером 5', like: 7, name:'Pavel Shilik', data:'12.19.2023'},
             ],    
-            newPostText:''
+            newPostText:'',
         }, 
     
         pageDialogs: {   //Массив передается в Dialogs
@@ -25,6 +29,11 @@ let store = {
             {id:6, name:'Настя Фролова', data:'18:11', message:'Зайди в переписку 6'},
             {id:7, name:'Настя Занделова', data:'13:00', message:'Зайди в переписку 7'}
             ],  
+            myOldMessage:[
+              {id:1, text:'Привет', time: '13.11', name: 'Pavel Shilik', data: '12.02.2024', status: true},
+              {id:1, text:'Ау', time: '13.19', name: 'Pavel Shilik', data: '12.02.2024', status: true},
+            ],
+            newMessageText:''
         },
     
         navBarComponent: {
@@ -46,24 +55,15 @@ let store = {
         this._rerenderEntriesThree = observer;
     },
 
-    addPost () { //Добавление нового поста после ввода текста в textarea
-        const newPost = {
-            id: 5,
-            text: this._state.pageProfile.newPostText,
-            like: 0,
-            name: 'Pavel Shilik',
-            data: 'дата',
-        }
-        this._state.pageProfile.oldPostContent.unshift(newPost);
-        this._state.pageProfile.newPostText='';
-        this._rerenderEntriesThree(this._state)
-    },
-    changeNewPostText (newText) { //Изменение value в textarea и добавление его в state
-        this._state.pageProfile.newPostText = newText;
-        this._rerenderEntriesThree(this._state)
-    },
+    dispatch (action) {
+      this._state.pageProfile = profileReducer(this._state.pageProfile, action);
+      this._state.pageDialogs = dialogsReducer(this._state.pageDialogs, action);
+      this._state.navBarComponent = navBarReducer(this._state.navBarComponent, action);
 
+      this._rerenderEntriesThree(this._state);   
+    }
 }
+
 
 export default store;
 window.store = store;

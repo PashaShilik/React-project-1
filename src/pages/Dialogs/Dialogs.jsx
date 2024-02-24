@@ -9,7 +9,7 @@ function Dialogs (props) {
             <h3 className={styles.page_title}>Dialogs</h3>
             <div className={styles.messages_container}>
                 <Interlocutors usersData={props.usersData}/>
-                <MessageExchange/> 
+                <MessageExchange myOldMessage={props.myOldMessage} newMessageText={props.newMessageText} dispatch={props.dispatch}/> 
             </div>
         </div>
     )
